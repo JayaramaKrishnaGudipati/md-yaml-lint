@@ -1,0 +1,41 @@
+{
+  "name": "md-yaml-lint",
+  "displayName": "markdown-yaml-lint",
+  "description": "Performs Yaml Lint and provides if any syntax issues in the yaml code embedded in a Markdown File.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "publisher": "vscode-md-yaml-lint",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JayaramaKrishnaGudipati/md-yaml-lint"
+  },
+  "engines": {
+    "vscode": "^1.84.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [{
+      "command": "md-yaml-lint.runYamlLint",
+      "title": "md-yaml-lint"
+    }]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.84.0",
+    "@types/mocha": "^10.0.3",
+    "@types/node": "18.x",
+    "eslint": "^8.52.0",
+    "glob": "^10.3.10",
+    "mocha": "^10.2.0",
+    "typescript": "^5.2.2",
+    "@vscode/test-electron": "^2.3.6"
+  }
+}
